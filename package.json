@@ -1,0 +1,23 @@
+{
+  "name": "0006-m6-u4-cons",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/operezedutecno/0006-M6-U4-CONS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/operezedutecno/0006-M6-U4-CONS/issues"
+  },
+  "homepage": "https://github.com/operezedutecno/0006-M6-U4-CONS#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
