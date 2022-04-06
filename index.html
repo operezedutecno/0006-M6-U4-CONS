@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion de empleados</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+</head>
+<body>
+<h1>Gestion de empleados</h1>
+    <div class="container">
+        
+        <form action="">
+            <div class="row">
+                <div class="col-3">
+                    <label for="">Rut</label>
+                    <input class="form-control" id="txtRut" type="text">
+                </div>
+                <div class="col-3">
+                    <label for="">Nombre</label>
+                    <input class="form-control" id="txtNombre" type="text">
+
+                </div>
+                <div class="col-3">
+                    <label for="">Salario</label>
+                    <input class="form-control" id="txtSalario" type="text">
+
+                </div>
+                <div class="col-3">
+                    <label for="">Horas trabajadas</label>
+                    <input class="form-control" id="txtHorasTrabajadas" type="text">
+
+                </div>
+                <div class="col-3 pt-3">
+                    <button class="btn btn-primary">Enviar</button>
+
+                </div>
+            </div>
+        </form>
+
+        <table id="tabla" class="table table-bordered mt-4">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Rut</th>
+                    <th>Nombre</th>
+                    <th>Salario</th>
+                    <th>Horas trabajadas</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
