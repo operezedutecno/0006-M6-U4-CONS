@@ -1,0 +1,12 @@
+- Crear repositorio Github.
+- Crear archivo para persistir datos. Este archivo debe contener un objeto con un atributo llamado "empleados", 
+el mismo será un arreglo de objetos.
+- Crear un archivo .html con un formulario en la parte superior, y en la parte inferior un listado con las 
+siguientes columnas #, rut, nombre, salario hora, horas trabajadas y salario neto.
+- Implementar bootstrap y jquery por CDN.
+- FRONTEND -> Crear el evento cuando el usuario presione el botón de registrar envíe una petición POST utilizando axios.
+- FRONTEND -> Crear un método que liste los empleados registrados.
+- BACKEND -> Crear la ruta que publique el archivo .html.
+- BACKEND -> Crear la ruta que registre un nuevo empleado.
+- BACKEND -> Crear el midleware que valide los datos del registro.
+- BACKEND -> Crear la ruta que devuelva los empleados registrados.
