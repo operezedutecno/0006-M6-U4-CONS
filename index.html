@@ -32,7 +32,7 @@
 
                 </div>
                 <div class="col-3 pt-3">
-                    <button class="btn btn-primary">Enviar</button>
+                    <button id="btn-registrar" class="btn btn-primary">Enviar</button>
 
                 </div>
             </div>
@@ -46,6 +46,7 @@
                     <th>Nombre</th>
                     <th>Salario</th>
                     <th>Horas trabajadas</th>
+                    <th>Salario neto</th>
                 </tr>
             </thead>
             <tbody></tbody>
@@ -58,5 +59,54 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+    <script>
+        $(()=>{
+
+            $("#btn-registrar").click(function (event){
+                event.preventDefault()
+
+                let rut= $("#txtRut").val()
+                let nombre= $('#txtNombre').val()
+                let salario= $('#txtSalario').val()
+                let horasTrabajadas= $('#txtHorasTrabajadas').val()
+
+                let empleado= {rut, nombre, salario, horas_trabajadas: horasTrabajadas}
+
+                axios.post('/empleados', empleado).then((response)=>{
+                   alert( response.data )
+
+                   listar()
+
+                   $('form')[0].reset()
+                }).catch((error)=>{
+                    console.log(error.response.data)
+                })
+                
+            })
+
+            function listar(){
+                axios.get('/empleados').then((response)=>{
+                    $('#tabla tbody').html('');
+                    response.data.empleados.forEach((empleado, index) => {
+                        $('#tabla tbody').append(
+                            ` <tr>
+                                <th>${index+1}</th>
+                                <th>${empleado.rut}</th>
+                                <th>${empleado.nombre}</th>
+                                <th>${empleado.salario}</th>
+                                <th>${empleado.horas_trabajadas}</th>
+                                <th>${empleado.salario * empleado.horas_trabajadas}</th>
+                            </tr>`
+                        )
+                    });
+                }).catch((error)=>{
+                    console.log(error.response.data)
+                })
+            }
+
+            listar()
+        })
+    </script>
 </body>
 </html>
