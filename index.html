@@ -91,12 +91,12 @@
                     response.data.empleados.forEach((empleado, index) => {
                         $('#tabla tbody').append(
                             ` <tr>
-                                <th>${index+1}</th>
-                                <th>${empleado.rut}</th>
-                                <th>${empleado.nombre}</th>
-                                <th>${empleado.salario}</th>
-                                <th>${empleado.horas_trabajadas}</th>
-                                <th>${empleado.salario * empleado.horas_trabajadas}</th>
+                                <td>${index+1}</td>
+                                <td>${empleado.rut}</td>
+                                <td>${empleado.nombre}</td>
+                                <td>${empleado.salario}</td>
+                                <td>${empleado.horas_trabajadas}</td>
+                                <td>${empleado.salario * empleado.horas_trabajadas}</td>
                             </tr>`
                         )
                     });

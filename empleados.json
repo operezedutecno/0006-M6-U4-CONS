@@ -1,3 +1,22 @@
 {
-    "empleados" : []
+    "empleados": [
+        {
+            "rut": "80193807",
+            "nombre": "Cesar",
+            "salario": "1000",
+            "horas_trabajadas": "25"
+        },
+        {
+            "rut": "27325378",
+            "nombre": "Carla",
+            "salario": "450",
+            "horas_trabajadas": "11"
+        },
+        {
+            "rut": "2566355",
+            "nombre": "Leon",
+            "salario": "780",
+            "horas_trabajadas": "11"
+        }
+    ]
 }
