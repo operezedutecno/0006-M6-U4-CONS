@@ -17,6 +17,12 @@
             "nombre": "Leon",
             "salario": "780",
             "horas_trabajadas": "11"
+        },
+        {
+            "rut": "12345",
+            "nombre": "Juan",
+            "salario": "20000",
+            "horas_trabajadas": "40"
         }
     ]
 }
